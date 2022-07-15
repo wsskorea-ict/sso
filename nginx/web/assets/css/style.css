@@ -156,7 +156,8 @@ form {
 }
 
 .login-page .form-control::placeholder {
-    opacity: 0;
+    /*opacity: 0;*/
+    color: #ffffff;
 }
 
 .login-page .auto_login-form-box {
