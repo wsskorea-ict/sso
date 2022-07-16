@@ -6,8 +6,8 @@
         인증 코드 입력
     <#elseif section = "form">
         <p class="page-description text-center">인증 앱에서 코드를 확인하세요</p>
-        <form onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="POST">
-            <input type="hidden" name="mfa">
+        <form onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="POST" id="mfa-form">
+            <input type="hidden" name="otp">
 
             <div class="mfa-wrapper">
                 <div class="form-box">

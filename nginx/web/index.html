@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -8,37 +8,31 @@
     <title>SSO 로그인 : WSSKOREA</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
-
 </head>
-<body class="step1">
-
+<body>
 <div>
     <h2 class="portal-title text-center"><b>WSS</b>KOREA PORTAL</h2>
-
     <div class="login-page page">
         <div class="content-box">
             <h3 class="page-title text-center">통합 로그인</h3>
 
-            <form action="" method="post">
+            <form onsubmit="login.disabled = true; return true;" action="#" method="POST">
                 <div class="form-box login-form-box">
-                    <input type="text" name="username" id="username" class="form-control" placeholder="아이디" required>
+                    <input id="username" class="form-control" name="username"
+                           value="${(login.username!'')}" type="text" placeholder="아이디" autofocus autocomplete="off">
                     <label for="username" class="form-label"><i class="f"></i> 아이디</label>
                 </div>
+
                 <div class="form-box password-form-box">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="비밀번호" required>
+                    <input id="password" class="form-control" name="password"
+                           type="password" placeholder="비밀번호" autocomplete="off">
                     <label for="password" class="form-label"><i class="f"></i> 비밀번호</label>
                 </div>
-                <div class="auto_login-form-box">
-                    <input type="checkbox" name="auto-login" id="auto-login">
-                    <label for="auto-login">로그인 유지</label>
-                </div>
-                <div>
-                    <input type="submit" class="form-submit" name="login" value="로그인">
-                </div>
+
+                <input class="form-submit" name="login" type="submit" value="로그인"/>
             </form>
         </div>
     </div>
-
 </div>
 </body>
 </html>
