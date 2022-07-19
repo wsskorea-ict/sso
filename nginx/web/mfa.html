@@ -8,49 +8,6 @@
     <title>SSO 로그인 : WSSKOREA</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./vendor/fontawesome-free-6.1.1-web/css/all.min.css">
-
-</head>
-<body>
-<div>
-    <h2 class="portal-title text-center"><b>WSS</b>KOREA PORTAL</h2>
-    <div class="login-page page">
-        <div class="content-box">
-            <h3 class="page-title text-center">통합 로그인</h3>
-
-            <form onsubmit="login.disabled = true; return true;" action="#" method="POST">
-                <div class="form-box login-form-box">
-                    <input id="username" class="form-control" name="username"
-                           value="${(login.username!'')}" type="text" placeholder="아이디" autofocus autocomplete="off">
-                    <label for="username" class="form-label"><i class="fa-solid fa-user"></i> 아이디</label>
-                </div>
-
-                <div class="form-box password-form-box">
-                    <input id="password" class="form-control" name="password"
-                           type="password" placeholder="비밀번호" autocomplete="off">
-                    <label for="password" class="form-label"><i class="fa-solid fa-lock"></i> 비밀번호</label>
-                </div>
-
-                <input class="form-submit" name="login" type="submit" value="로그인"/>
-            </form>
-        </div>
-    </div>
-</div>
-</body>
-</html>
-
-
-
-<!doctype html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SSO 로그인 : WSSKOREA</title>
-
-    <link rel="stylesheet" href="./assets/css/style.css">
     <script type="text/javascript" src="./assets/js/script.js"></script>
     <link rel="stylesheet" href="./vendor/fontawesome-free-6.1.1-web/css/all.min.css">
 
@@ -65,7 +22,7 @@
             <h3 class="page-title text-center">인증 코드 입력</h3>
             <p class="page-description text-center">인증 앱에서 코드를 확인하세요</p>
 
-            <form onsubmit="login.disabled = true; return true;" action="#" method="POST" id="mfa-form">
+            <form onsubmit="/*login.disabled = true; return true;*/" action="#" method="POST" id="mfa-form">
                 <input type="hidden" name="otp">
 
                 <div class="mfa-wrapper">

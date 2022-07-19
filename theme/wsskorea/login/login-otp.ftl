@@ -13,38 +13,43 @@
                 <div class="form-box">
                     <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                            spellcheck="false" required
-                           type="tel" id="code0" class="form-control text-center mfa-code-input">
+                           type="tel" data-code="0" class="form-control text-center mfa-code-input">
                 </div>
                 <div class="form-box">
                     <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                            spellcheck="false" required
-                           type="tel" id="code1" class="form-control text-center mfa-code-input">
+                           type="tel" data-code="1" class="form-control text-center mfa-code-input">
                 </div>
                 <div class="form-box">
                     <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                            spellcheck="false" required
-                           type="tel" id="code2" class="form-control text-center mfa-code-input">
+                           type="tel" data-code="2" class="form-control text-center mfa-code-input">
                 </div>
                 <div class="form-box">
                     <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                            spellcheck="false" required
-                           type="tel" id="code3" class="form-control text-center mfa-code-input">
+                           type="tel" data-code="3" class="form-control text-center mfa-code-input">
                 </div>
                 <div class="form-box">
                     <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                            spellcheck="false" required
-                           type="tel" id="code4" class="form-control text-center mfa-code-input">
+                           type="tel" data-code="4" class="form-control text-center mfa-code-input">
                 </div>
                 <div class="form-box">
                     <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                            spellcheck="false" required
-                           type="tel" id="code5" class="form-control text-center mfa-code-input">
+                           type="tel" data-code="5" class="form-control text-center mfa-code-input">
                 </div>
             </div>
-            <div>
-                <input type="submit" class="form-submit" value="로그인">
-            </div>
+<#--            <div>-->
+<#--                <input type="submit" class="form-submit" value="로그인">-->
+<#--            </div>-->
         </form>
+        <div class="text-center problemMail">
+            <a href="mailto:abc@example.com">
+                <i class="fa-regular fa-circle-question"></i> 인증앱에 문제가 발생했나요?
+            </a>
+        </div>
     <#elseif section = "info" >
         <#if realm.password && realm.registrationAllowed && !usernameEditDisabled??>
             <div id="kc-registration">

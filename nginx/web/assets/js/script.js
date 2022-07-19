@@ -9,8 +9,8 @@ window.onload = () => {
     const getInput = id => document.querySelector(`.mfa-code-input[data-code="${id}"]`);
     const focusInput = id => {
         const $input = getInput(id);
-        if($input) {
-            if($input.value) return focusInput(id+1);
+        if ($input) {
+            if ($input.value) return focusInput(id + 1);
             $input.focus();
         }
     }
@@ -21,26 +21,27 @@ window.onload = () => {
             this.select()
         })
         /** validation number and next focus **/
-        elem.addEventListener('input', function(e){
+        elem.addEventListener('input', function (e) {
             this.value = this.value.replaceAll(reg, '');
-            if(!this.value) return;
-            if(getCode().length === 6) {
+            if (!this.value) return;
+            if (getCode().length === 6) {
+                document.querySelector('[name="otp"]').value = getCode();
                 $form.submit();
                 return;
             }
             focusInput(+this.getAttribute('data-code') + 1);
         })
         /** copy and paste then autofill code **/
-        elem.addEventListener('paste', function(e){
+        elem.addEventListener('paste', function (e) {
             const textArr = e.clipboardData.getData('text').replaceAll(reg, "").slice(1).split("");
             const startId = +this.getAttribute('data-code') + 1;
-            for(const i in textArr){
+            for (const i in textArr) {
                 getInput(startId + +i).value = textArr[+i]
             }
         })
     })
     /** submit form **/
-    $form.addEventListener('submit', function(){
+    $form.addEventListener('submit', function () {
         this.querySelector('[name="otp"]').value = getCode();
     })
 }
