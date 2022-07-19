@@ -14,6 +14,7 @@ window.onload = () => {
             $input.focus();
         }
     }
+    const getId = elem => +elem.getAttribute('data-code')
     /** add event  **/
     $inputs.forEach(elem => {
         /** focus then select **/
@@ -29,14 +30,41 @@ window.onload = () => {
                 $form.submit();
                 return;
             }
-            focusInput(+this.getAttribute('data-code') + 1);
+            focusInput(getId(this) + 1);
         })
         /** copy and paste then autofill code **/
         elem.addEventListener('paste', function (e) {
             const textArr = e.clipboardData.getData('text').replaceAll(reg, "").slice(1).split("");
-            const startId = +this.getAttribute('data-code') + 1;
+            const startId = getId(this) + 1;
             for (const i in textArr) {
                 getInput(startId + +i).value = textArr[+i]
+            }
+        })
+        /** delete code **/
+        elem.addEventListener('keydown', function(e) {
+            if(e.code !== 'Delete' && e.code !== 'Backspace') return
+
+            e.preventDefault();
+
+            this.value = "";
+            const $leftInput = getInput(getId(this) - 1);
+            if($leftInput) {
+                $leftInput.focus();
+                $leftInput.select();
+            }
+        })
+        /** move left, right **/
+        elem.addEventListener('keyup', function(e) {
+            const $leftInput = getInput(getId(this) - 1);
+            const $rightInput = getInput(getId(this) + 1);
+
+            if(e.code === 'ArrowLeft' && $leftInput) {
+                $leftInput.focus();
+                $leftInput.select();
+            }
+            if(e.code === 'ArrowRight' && $rightInput) {
+                $rightInput.focus();
+                $rightInput.select();
             }
         })
     })
