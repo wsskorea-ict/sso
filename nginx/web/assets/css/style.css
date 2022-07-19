@@ -112,6 +112,10 @@ form {
     line-height: 1.5;
 }
 
+.form-label i {
+    margin-right: .4rem;
+}
+
 .form-submit {
     display: flex;
     justify-content: center;
@@ -197,4 +201,10 @@ form {
 .mfa-page .form-control {
     font-size: 2rem;
     padding: 0;
+}
+
+.mfa-page .problemMail {
+    color: #777777;
+    font-size: 14px;
+    margin-top: 2rem;
 }

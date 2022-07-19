@@ -8,6 +8,8 @@
     <title>SSO 로그인 : WSSKOREA</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./vendor/fontawesome-free-6.1.1-web/css/all.min.css">
+
 </head>
 <body>
 <div>
@@ -20,13 +22,13 @@
                 <div class="form-box login-form-box">
                     <input id="username" class="form-control" name="username"
                            value="${(login.username!'')}" type="text" placeholder="아이디" autofocus autocomplete="off">
-                    <label for="username" class="form-label"><i class="f"></i> 아이디</label>
+                    <label for="username" class="form-label"><i class="fa-solid fa-user"></i> 아이디</label>
                 </div>
 
                 <div class="form-box password-form-box">
                     <input id="password" class="form-control" name="password"
                            type="password" placeholder="비밀번호" autocomplete="off">
-                    <label for="password" class="form-label"><i class="f"></i> 비밀번호</label>
+                    <label for="password" class="form-label"><i class="fa-solid fa-lock"></i> 비밀번호</label>
                 </div>
 
                 <input class="form-submit" name="login" type="submit" value="로그인"/>
@@ -50,6 +52,7 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <script type="text/javascript" src="./assets/js/script.js"></script>
+    <link rel="stylesheet" href="./vendor/fontawesome-free-6.1.1-web/css/all.min.css">
 
 </head>
 <body>
@@ -69,38 +72,37 @@
                     <div class="form-box">
                         <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                                spellcheck="false" required
-                               type="tel" id="code0" class="form-control text-center mfa-code-input">
+                               type="tel" data-code="0" class="form-control text-center mfa-code-input">
                     </div>
                     <div class="form-box">
                         <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                                spellcheck="false" required
-                               type="tel" id="code1" class="form-control text-center mfa-code-input">
+                               type="tel" data-code="1" class="form-control text-center mfa-code-input">
                     </div>
                     <div class="form-box">
                         <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                                spellcheck="false" required
-                               type="tel" id="code2" class="form-control text-center mfa-code-input">
+                               type="tel" data-code="2" class="form-control text-center mfa-code-input">
                     </div>
                     <div class="form-box">
                         <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                                spellcheck="false" required
-                               type="tel" id="code3" class="form-control text-center mfa-code-input">
+                               type="tel" data-code="3" class="form-control text-center mfa-code-input">
                     </div>
                     <div class="form-box">
                         <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                                spellcheck="false" required
-                               type="tel" id="code4" class="form-control text-center mfa-code-input">
+                               type="tel" data-code="4" class="form-control text-center mfa-code-input">
                     </div>
                     <div class="form-box">
                         <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
                                spellcheck="false" required
-                               type="tel" id="code5" class="form-control text-center mfa-code-input">
+                               type="tel" data-code="5" class="form-control text-center mfa-code-input">
                     </div>
-                </div>
-                <div>
-                    <input type="submit" class="form-submit" value="로그인">
                 </div>
             </form>
+
+            <div class="text-center problemMail"><a href = "mailto: abc@example.com"><i class="fa-regular fa-circle-question"></i> 인증앱에 문제가 발생했나요?</a></div>
 
         </div>
     </div>
