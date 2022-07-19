@@ -202,3 +202,9 @@ form {
     font-size: 2rem;
     padding: 0;
 }
+
+.mfa-page .problemMail {
+    color: #777777;
+    font-size: 14px;
+    margin-top: 2rem;
+}
