@@ -4,6 +4,10 @@
 /* variable */
 :root {
     --main-color: #006CFF;
+    --success-color: #3ac73b;
+    --info-color: #1755da;
+    --warning-color: #f7cc07;
+    --error-color: #dd322e;
 }
 
 * {
@@ -32,6 +36,47 @@ button {
 /* lib */
 .text-center {
     text-align: center;
+}
+
+.notification {
+    display: none;
+    border-radius: .4em;
+}
+
+.notification.show {
+    display: block;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .6em .8em;
+}
+
+.notification-content i {
+    margin-right: .4em;
+}
+
+.notification__success {
+    background-color: var(--success-color);
+    color: #000;
+}
+
+.notification__info {
+    background-color: var(--info-color);
+    color: #fff;
+}
+
+.notification__warning {
+    background-color: var(--warning-color);
+    color: #000;
+}
+
+.notification__error {
+    background-color: var(--error-color);
+    color: #fff;
 }
 
 /* design */
@@ -171,6 +216,10 @@ form {
     margin-right: .5rem;
 }
 
+.login-page .notification {
+    margin-top: 2rem;
+}
+
 /* mfa page */
 .mfa-page .content-box {
     padding-left: 2rem;
@@ -206,5 +255,9 @@ form {
 .mfa-page .problemMail {
     color: #777777;
     font-size: 14px;
+    margin-top: 2rem;
+}
+
+.mfa-page .notification {
     margin-top: 2rem;
 }
