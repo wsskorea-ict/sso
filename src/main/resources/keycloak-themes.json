@@ -1,0 +1,12 @@
+{
+  "themes": [{
+    "name" : "wsskorea",
+    "types": [
+      "account",
+      "admin",
+      "email",
+      "login",
+      "welcome"
+    ]
+  }]
+}
