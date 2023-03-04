@@ -29,8 +29,42 @@
                 </div>
 
             <div class="${properties.kcInputWrapperClass!}">
-                <input id="otp" name="otp" autocomplete="off" type="text" class="${properties.kcInputClass!}"
+                <div class="mfa-wrapper">
+                    <div class="form-box">
+                        <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
+                               spellcheck="false" required
+                               type="tel" data-code="0" class="form-control text-center mfa-code-input">
+                    </div>
+                    <div class="form-box">
+                        <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
+                               spellcheck="false" required
+                               type="tel" data-code="1" class="form-control text-center mfa-code-input">
+                    </div>
+                    <div class="form-box">
+                        <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
+                               spellcheck="false" required
+                               type="tel" data-code="2" class="form-control text-center mfa-code-input">
+                    </div>
+                    <div class="form-box">
+                        <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
+                               spellcheck="false" required
+                               type="tel" data-code="3" class="form-control text-center mfa-code-input">
+                    </div>
+                    <div class="form-box">
+                        <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
+                               spellcheck="false" required
+                               type="tel" data-code="4" class="form-control text-center mfa-code-input">
+                    </div>
+                    <div class="form-box">
+                        <input maxlength="1" autocorrect="off" autocomplete="off" autocapitalize="off"
+                               spellcheck="false" required
+                               type="tel" data-code="5" class="form-control text-center mfa-code-input">
+                    </div>
+                </div>
+                <input id="otp" name="otp" autocomplete="off" type="hidden"
                        autofocus aria-invalid="<#if messagesPerField.existsError('totp')>true</#if>"/>
+<#--                <input id="otp" name="otp" autocomplete="off" type="text" class="${properties.kcInputClass!}"-->
+<#--                       autofocus aria-invalid="<#if messagesPerField.existsError('totp')>true</#if>"/>-->
 
                 <#if messagesPerField.existsError('totp')>
                     <span id="input-error-otp-code" class="${properties.kcInputErrorMessageClass!}"

@@ -6,6 +6,7 @@ RUN mvn install clean compile jar:jar
 
 FROM quay.io/keycloak/keycloak:latest as builder
 
+
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
 ENV KC_FEATURES=token-exchange
@@ -27,4 +28,4 @@ RUN keytool -genkeypair -storepass password -storetype PKCS12 -keyalg RSA -keysi
 #ENV KC_DB_PASSWORD=<DBPASSWORD>
 #ENV KC_HOSTNAME=localhost
 ENV KC_HOSTNAME=10.0.0.11
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start"]

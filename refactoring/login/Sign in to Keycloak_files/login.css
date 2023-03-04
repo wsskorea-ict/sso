@@ -106,6 +106,13 @@ body {
     top: 3px;
 }
 
+.alert-error {
+    background-color: #F8D7DA;
+    color: #842029;
+    border: solid 1px #F5C2C7;
+    border-radius: .1rem;
+}
+
 
 
 

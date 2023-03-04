@@ -13,11 +13,11 @@
         </#if>
         <title>${msg("loginTitle",(realm.displayName!''))}</title>
         <link rel="icon" href="${url.resourcesPath}/img/favicon.ico">
-        <#if properties.stylesCommon?has_content>
-            <#list properties.stylesCommon?split(' ') as style>
-                <link href="${url.resourcesCommonPath}/${style}" rel="stylesheet">
-            </#list>
-        </#if>
+<#--        <#if properties.stylesCommon?has_content>-->
+<#--            <#list properties.stylesCommon?split(' ') as style>-->
+<#--                <link href="${url.resourcesCommonPath}/${style}" rel="stylesheet">-->
+<#--            </#list>-->
+<#--        </#if>-->
         <#if properties.styles?has_content>
             <#list properties.styles?split(' ') as style>
                 <link href="${url.resourcesPath}/${style}" rel="stylesheet">
@@ -65,11 +65,11 @@
                                 <span class="subtitle"><span class="required">*</span> ${msg("requiredFields")}</span>
                             </div>
                             <div class="col-md-10">
-                                <h1 id="kc-page-title"><#nested "header"></h1>
+                                <h3 id="kc-page-title"><#nested "header"></h3>
                             </div>
                         </div>
                     <#else>
-                        <h1 id="kc-page-title"><#nested "header"></h1>
+                        <h3 id="kc-page-title"><#nested "header"></h3>
                     </#if>
                 <#else>
                     <#if displayRequiredFields>

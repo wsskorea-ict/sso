@@ -46,8 +46,10 @@
 //     })
 // }
 
-document.querySelectorAll('.form-control').forEach((value) => {
-    value.addEventListener('keypress', (event) => {
-        console.log('test');
+window.onload = () => {
+    document.querySelectorAll('.form-control').forEach((value) => {
+        value.addEventListener('keydown', (event) => {
+            console.log(event.target.value.length);
+        });
     });
-});
+}

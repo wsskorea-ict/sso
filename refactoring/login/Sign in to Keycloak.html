@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html class="login-pf">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sign in to Keycloak</title>
+    <link rel="icon" href="http://10.0.0.11:8080/resources/3ysw0/login/wsskorea/img/favicon.ico">
+
+    <!-- TODO: Update css order in login.ftl (patternfly -> custom to custom -> patternfly) -->
+    <link href="./Sign%20in%20to%20Keycloak_files/login.css" rel="stylesheet">
+    <!--    <link href="./Sign in to Keycloak_files/base.css" rel="stylesheet">-->
+    <!--    <link href="./Sign in to Keycloak_files/app.css" rel="stylesheet">-->
+    <!--    <link href="./Sign in to Keycloak_files/patternfly.min.css" rel="stylesheet">-->
+    <!--    <link href="./Sign in to Keycloak_files/patternfly-additions.min.css" rel="stylesheet">-->
+    <!--    <link href="./Sign in to Keycloak_files/pficon.css" rel="stylesheet">-->
+</head>
+<body class="">
+<div class="login-pf-page">
+    <div id="kc-header" class="login-pf-page-header">
+        <div id="kc-header-wrapper" class=""><div class="kc-logo-text"><span>Keycloak</span></div></div>
+    </div>
+    <div class="card-pf">
+        <header class="login-pf-header">
+            <h3 id="kc-page-title">        Sign in to your account
+
+            </h3>
+        </header>
+        <div id="kc-content">
+            <div id="kc-content-wrapper">
+
+                <div class="alert-error pf-c-alert pf-m-inline pf-m-danger">
+                    <div class="pf-c-alert__icon">
+                        <span class="fa fa-fw fa-exclamation-circle"></span>
+                    </div>
+                    <span class="pf-c-alert__title kc-feedback-text">Your login attempt timed out.  Login will start from the beginning.</span>
+                </div>
+
+                <div id="kc-form">
+                    <div id="kc-form-wrapper">
+                        <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="http://10.0.0.11:8080/realms/master/login-actions/authenticate?session_code=dClUyxtX7V0dJbFQPBNC17y-P5DdeK2HRuV4FXg_VGo&amp;execution=33a198ba-028b-4783-9f22-eebebe43c932&amp;client_id=security-admin-console&amp;tab_id=RE3suOdoSFk" method="post">
+                            <!-- username input group start -->
+                            <div class="form-group form-box">
+                                <input tabindex="1" id="username" class="form-control" name="username" placeholder="Username or email" value="" type="text" autofocus="" autocomplete="off" aria-invalid="">
+                                <label for="username" class="form-label">
+                                    Username or email
+                                </label>
+                            </div>
+                            <!-- username input group end -->
+
+                            <!-- password input group start -->
+                            <div class="form-group form-box">
+                                <input tabindex="2" id="password" class="form-control" name="password" type="password" autocomplete="off" placeholder="Password" aria-invalid="">
+                                <label for="password" class="form-label">Password</label>
+                            </div>
+                            <!-- password input group end -->
+
+                            <div class="form-group login-pf-settings">
+                                <div id="kc-form-options">
+                                </div>
+                                <div class="">
+                                </div>
+                            </div>
+
+                            <div id="kc-form-buttons" class="form-group">
+                                <input type="hidden" id="id-hidden-input" name="credentialId">
+                                <input tabindex="4" class="pf-c-button pf-m-primary pf-m-block btn-lg" name="login" id="kc-login" type="submit" value="Sign In">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
